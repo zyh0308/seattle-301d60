@@ -69,3 +69,23 @@ $.get('data.json').then(
     });
   });
 
+// this event is delegated to only trigger if a div inside the section with an id of `dogs` is clicked.
+$('#dogs').on('click', 'div', function(){
+  $(this).hide();
+});
+
+
+$('button').on('click', function(){
+  // first hide all the divs
+  $('div').hide();
+
+  // then use the button text to find any h2 with text that matches it
+  const buttonText = $(this).text();
+  $('h2').each(function(){
+    if($(this).text() === buttonText){
+
+      // then use a jquery traversal to find the parent of the h2 (which for us is the dog's div) and show it
+      $(this).parent().show();
+    }
+  });
+});
