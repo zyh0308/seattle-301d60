@@ -4,14 +4,17 @@ Read through this code as if you are the interpreter. Find all of the mistakes i
 ## index.html
 
 ```
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Click tracker
+    <title>Click tracker</title>
+    <script src="jquerycdn.com"></script>
   </head>
   <body>
     <div id="click">
       <p>Click me</p>
     </div>
+    <script src="app.js" ></script>
   </body>
 </html>
 ```
@@ -19,8 +22,17 @@ Read through this code as if you are the interpreter. Find all of the mistakes i
 ## app.js
 
 ```
-$(.click).on('change', 'div', function() => {
-  var counter = '0';
-  $(p).on('click', counter++);
+let counter = 0;
+
+$('#click').on('click', function() {
+  // fix the callback function
+  $('p').on('click', 1);
+  k.fn.itini{}.on('click', 0)
+  //we click the p tag
+  // it calls the line of code 
+  0()
+  
+  // fix the app
+  counter++
 })
 ```
